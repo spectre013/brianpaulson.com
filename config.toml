@@ -1,10 +1,12 @@
-baseurl = "http://brianpaulson.com/"
+baseurl = "http://www.brianpaulson.com"
 title = "All About GO"
 languageCode = "en-us"
 disqusShortname = "allaboutgo"
 copyright = "Copyright (c) 2014, Brian Paulson; all rights reserved."
 MetaDataFormat = "toml"
-
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
 [author]
     name = "Brian Paulson"
 

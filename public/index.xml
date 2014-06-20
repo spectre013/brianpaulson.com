@@ -3,33 +3,80 @@
   <channel>
       <title>Recent Content on All About GO </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/index.xml</link>
+    <link>http://www.brianpaulson.com/index.xml</link>
     <language>en-us</language>
     <author>Brian Paulson</author>
     <copyright>Copyright (c) 2014, Brian Paulson; all rights reserved.</copyright>
-    <updated>Thu, 19 Jun 2014 00:00:00 UTC</updated>
+    <updated>Fri, 20 Jun 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Basic Web Skeleton</title>
+      <link>http://www.brianpaulson.com/project/webskeleton</link>
+      <pubDate>Fri, 20 Jun 2014 00:00:00 UTC</pubDate>
+      <author>Brian Paulson</author>
+      <guid>http://www.brianpaulson.com/project/webskeleton</guid>
+      <description>
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Web Skeleton&lt;/h2&gt;
+
+&lt;p&gt;Web Skeleton is a simple http/net server set up with routing, template rendering with the only external library being Mux for routing.&lt;/p&gt;
+
+&lt;p&gt;Implementing Web Skeleton
+Using Web Skeleton is simple. First use go get to install the latest version of the library.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ go get github.com/spectre013/webskeleton
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you have the source navigate to webskeleton directory and run.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ go run main.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will start the server at &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The handlers are all defined in handlers.go and rendering remplates is done my calling the render function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Render(w, &amp;quot;index&amp;quot;, &amp;quot;Test&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the render function has the abillity to render multiple templates. If you wanted to add a sidebar you would add&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;? template &amp;quot;sidebar&amp;quot; . ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to the index.html file. In sidebar.html file you would need to define the content.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;? define &amp;quot;sidebar&amp;quot; ?&amp;gt;
+    &amp;lt;!-- ... some html here ... --&amp;gt;
+&amp;lt;? end ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then would need to add the template to the render call.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Render(w, &amp;quot;index,sidebar&amp;quot;, &amp;quot;Test&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Go 1.3 Released</title>
-      <link>http://localhost:1313/post/first-post-go-hugo</link>
+      <link>http://www.brianpaulson.com/post/go-1.3-released</link>
       <pubDate>Thu, 19 Jun 2014 00:00:00 UTC</pubDate>
       <author>Brian Paulson</author>
-      <guid>http://localhost:1313/post/first-post-go-hugo</guid>
-      <description>&lt;p&gt;Today we are happy to announce the release of Go 1.3. This release comes six months after our last major release and provides better performance, improved tools, support for running Go in new environments, and more. All Go users should upgrade to Go 1.3. You can grab the release from our downloads page and find the full list of improvements and fixes in the release notes. What follows are some highlights.&lt;/p&gt;
+      <guid>http://www.brianpaulson.com/post/go-1.3-released</guid>
+      <description>&lt;p&gt;The latest Go release, version 1.3, arrives six months after 1.2, and contains no language changes. It focuses primarily on implementation work, providing precise garbage collection, a major refactoring of the compiler tool chain that results in faster builds, especially for large projects, significant performance improvements across the board, and support for DragonFly BSD, Solaris, Plan 9 and Google&amp;rsquo;s Native Client architecture (NaCl). It also has an important refinement to the memory model regarding synchronization. As always, Go 1.3 keeps the promise of compatibility, and almost everything will continue to compile and run without change when moved to 1.3.&lt;/p&gt;
 
-&lt;p&gt;Godoc, the Go documentation server, now performs static analysis. When enabled with the -analysis flag, analysis results are presented in both the source and package documentation views, making it easier than ever to navigate and understand Go programs. See the documentation for the details.&lt;/p&gt;
+&lt;p&gt;List of changes:&lt;/p&gt;
 
-&lt;p&gt;The gc toolchain now supports the Native Client (NaCl) execution sandbox on the 32- and 64-bit Intel architectures. This permits the safe execution of untrusted code, useful in environments such as the Playground. To set up NaCl on your system see the NativeClient wiki page.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;supported operating systems and architectures&lt;/li&gt;
+&lt;li&gt;Changes to the memory model&lt;/li&gt;
+&lt;li&gt;Changes to the implementations and tools&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Changes to the standard library&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;section&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
-   &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;h1&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    {{ range .Data.Pages }}
-        {{ .Render &amp;quot;summary&amp;quot;}}
-    {{ end }}
-  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For more information on all the changes please see the release notes: &lt;a href=&#34;http://golang.org/doc/go1.3&#34;&gt;Go 1.3 Release Notes&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

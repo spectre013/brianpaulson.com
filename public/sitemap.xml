@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2014-06-19T00:00:00+00:00</lastmod>
+    <loc>http://www.brianpaulson.com/</loc>
+    <lastmod>2014-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/first-post-go-hugo</loc>
+    <loc>http://www.brianpaulson.com/project/webskeleton</loc>
+    <lastmod>2014-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.brianpaulson.com/post/go-1.3-released</loc>
     <lastmod>2014-06-19T00:00:00+00:00</lastmod>
   </url>
   
