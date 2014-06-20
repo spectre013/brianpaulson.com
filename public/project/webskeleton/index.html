@@ -52,7 +52,6 @@
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/static/css/style.css">
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 
 <body lang="en" itemscope itemtype="http://schema.org/Article">
@@ -139,12 +138,12 @@ Using Web Skeleton is simple. First use go get to install the latest version of 
 
 <p>This will start the server at <a href="http://localhost:3000">http://localhost:3000</a></p>
 
-<p>The handlers are all defined in handlers.go and rendering remplates is done my calling the render function.</p>
+<p>The handlers are all defined in handlers.go and rendering templates is done my calling the render function.</p>
 
 <pre><code>Render(w, &quot;index&quot;, &quot;Test&quot;)
 </code></pre>
 
-<p>the render function has the abillity to render multiple templates. If you wanted to add a sidebar you would add</p>
+<p>the render function has the ability to render multiple templates. If you wanted to add a sidebar you would add</p>
 
 <pre><code>&lt;? template &quot;sidebar&quot; . ?&gt;
 </code></pre>

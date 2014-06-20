@@ -34,12 +34,12 @@ Using Web Skeleton is simple. First use go get to install the latest version of 
 
 &lt;p&gt;This will start the server at &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;The handlers are all defined in handlers.go and rendering remplates is done my calling the render function.&lt;/p&gt;
+&lt;p&gt;The handlers are all defined in handlers.go and rendering templates is done my calling the render function.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Render(w, &amp;quot;index&amp;quot;, &amp;quot;Test&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;the render function has the abillity to render multiple templates. If you wanted to add a sidebar you would add&lt;/p&gt;
+&lt;p&gt;the render function has the ability to render multiple templates. If you wanted to add a sidebar you would add&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;? template &amp;quot;sidebar&amp;quot; . ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;

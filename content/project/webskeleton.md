@@ -38,12 +38,12 @@ Once you have the source navigate to webskeleton directory and run.
 
 This will start the server at [http://localhost:3000](http://localhost:3000) 
 
-The handlers are all defined in handlers.go and rendering remplates is done my calling the render function.
+The handlers are all defined in handlers.go and rendering templates is done my calling the render function.
 
 
 	Render(w, "index", "Test")
 
-the render function has the abillity to render multiple templates. If you wanted to add a sidebar you would add 
+the render function has the ability to render multiple templates. If you wanted to add a sidebar you would add 
 
 	<? template "sidebar" . ?>
 
