@@ -1,0 +1,14 @@
+baseurl = "http://brianpaulson.com/"
+title = "All About GO"
+languageCode = "en-us"
+disqusShortname = "allaboutgo"
+copyright = "Copyright (c) 2014, Brian Paulson; all rights reserved."
+MetaDataFormat = "toml"
+
+[author]
+    name = "Brian Paulson"
+
+[indexes]
+    tag = "tags"
+    topic = "topics"
+

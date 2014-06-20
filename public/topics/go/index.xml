@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Go on All About GO </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/topics/go/index.xml</link>
+    <language>en-us</language>
+    <author>Brian Paulson</author>
+    <copyright>Copyright (c) 2014, Brian Paulson; all rights reserved.</copyright>
+    <updated>Thu, 19 Jun 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Go 1.3 Released</title>
+      <link>http://localhost:1313/post/first-post-go-hugo</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 UTC</pubDate>
+      <author>Brian Paulson</author>
+      <guid>http://localhost:1313/post/first-post-go-hugo</guid>
+      <description>&lt;p&gt;Today we are happy to announce the release of Go 1.3. This release comes six months after our last major release and provides better performance, improved tools, support for running Go in new environments, and more. All Go users should upgrade to Go 1.3. You can grab the release from our downloads page and find the full list of improvements and fixes in the release notes. What follows are some highlights.&lt;/p&gt;
+
+&lt;p&gt;Godoc, the Go documentation server, now performs static analysis. When enabled with the -analysis flag, analysis results are presented in both the source and package documentation views, making it easier than ever to navigate and understand Go programs. See the documentation for the details.&lt;/p&gt;
+
+&lt;p&gt;The gc toolchain now supports the Native Client (NaCl) execution sandbox on the 32- and 64-bit Intel architectures. This permits the safe execution of untrusted code, useful in environments such as the Playground. To set up NaCl on your system see the NativeClient wiki page.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;section&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+   &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;h1&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    {{ range .Data.Pages }}
+        {{ .Render &amp;quot;summary&amp;quot;}}
+    {{ end }}
+  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

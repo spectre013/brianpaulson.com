@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Github on Brian Paulson </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/github/index.xml</link>
+    <language>en-us</language>
+    
+    
+    <updated>Thu, 19 Jun 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>MongoDB Driver days hackathon round up</title>
+      <link>http://localhost:1313/post/10gen-driver-days-mongodb-hack-a-thon</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/post/10gen-driver-days-mongodb-hack-a-thon</guid>
+      <description>
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Welcome!!&lt;/h2&gt;
+
+&lt;p&gt;Hugo provides a robust theming system which is simple, yet capable of producing even the most complicated websites.&lt;/p&gt;
+
+&lt;p&gt;The Hugo community has created a set of themes ready for using in your own site.&lt;/p&gt;
+
+&lt;p&gt;Hugo themes have been designed to be the perfect balance between simplicity and functionality. Hugo themes are powered by the excellent go template library. If you are new to go templates, see our primer on go templates.&lt;/p&gt;
+
+&lt;p&gt;Hugo themes support all modern features you come to expect. They are structured in such a way to eliminate code duplication. Themes are also designed to be very easy to customize while retaining the ability to maintain upgradeability as the upstream theme changes.&lt;/p&gt;
+
+&lt;p&gt;Hugo currently doesn’t ship with a “default” theme, allowing the user to pick whichever theme best suits their project.&lt;/p&gt;
+
+&lt;p&gt;We hope you will find Hugo themes perfect for your site.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;section&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+   &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;h1&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    {{ range .Data.Pages }}
+        {{ .Render &amp;quot;summary&amp;quot;}}
+    {{ end }}
+  &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
