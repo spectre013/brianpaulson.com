@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Formatting function for JavaScript strings, by replacing elements in a the string using values passed in to the method.">
+<meta name="keywords" content="GO, ">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Formatting function for JavaScript strings, by replacing elements in a the string using values passed in to the method."/>
+<meta property="og:title" content="Foramtting function for JavaScript strings : brianpaulson.com"/>
+<meta property="og:site_name" content="Brian Paulson"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="http://localhost:1313/post/javascript-string-format">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2014-08-08"/>
+<meta property="article:modified_time" content="2014-08-08"/>
+
+
+
+<meta property="article:tag" content="GO">
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@brian_paulson">
+<meta name="twitter:title" content="Foramtting function for JavaScript strings : brianpaulson.com">
+<meta name="twitter:creator" content="@brian_paulson">
+<meta name="twitter:description" content="Formatting function for JavaScript strings, by replacing elements in a the string using values passed in to the method.">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="brianpaulson.com">
+
+
+ 
+    <base href="http://localhost:1313">
+    <title> Foramtting function for JavaScript strings - brianpaulson.com </title>
+    <link rel="canonical" href="http://localhost:1313/post/javascript-string-format">
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    <figure>
+      <a href="/" border=0 id="logolink"><div class="icon-spinner" id="logo"> </div></a>
+    </figure>
+    <div id="byline">by Brian Paulson</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-pencil"></i></span>
+                <span> blog </span>
+            </a>
+            </li>
+            <li>
+            <a href="/project/">
+                <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                <span> code </span>
+            </a>
+            </li>
+        </ul>
+
+            <ul id="social">
+            <li id="share">
+                <span class="icon icon-bubbles"> </span>
+                <span class="title"> share </span>
+                <div class="dropdown share">
+                    <ul class="social">
+                      <li> <a href="https://twitter.com/intent/tweet?status=Foramtting%20function%20for%20JavaScript%20strings-http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
+                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
+                        <li> <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="Google+" class="googleplus"><span class="icon icon-google-plus"></span>Google+</a> </li>
+                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format&title=Foramtting%20function%20for%20JavaScript%20strings&source=brianpaulson" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
+                        <li> <a href="http://del.icio.us/post?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Delicious</a> </li>
+                        <li> <a href="http://www.reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="Reddit" class="reddit"><span class="icon icon-reddit"></span>Reddit</a> </li>
+                        <li> <a href="http://www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fjavascript-string-format" target="_blank" title="StumbleUpon" class="stumbleupon"><span class="icon icon-stumbleupon"></span>StumbleUpon</a> </li>
+                    </ul>
+                    <span class="subcount">sharing is caring</span>
+                </div>
+            </li>
+            <li id="follow">
+                <span class="icon icon-rocket"> </span>
+                <span class="title"> follow </span>
+                <div class="dropdown follow">
+                    <ul class="social">
+                        <li> <a href="http://feeds.feedburner.com/RecentContentOnAllAboutGo" target="_blank" title="Subscribe by RSS" class="rss"><span class="icon icon-feed-2"></span>RSS</a> </li>
+                        <li> <a href="http://www.twitter.com/brian_paulson" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
+                        <li> <a href="https://www.facebook.com/paulson.brian" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
+                        <li> <a href="https://www.linkedin.com/in/brianepaulson" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
+                        <li> <a href="http://github.com/spectre013" target="_blank" title="GitHub" class="github"><span class="icon icon-github"></span>GitHub</a> </li>
+                        <li> <a href="http://gplus.to/brianpaulson" target="_blank" title="Google+" class="googleplus"><span class="icon icon-google-plus"></span>Google+</a> </li>
+                    </ul>
+                    <span class="subcount">join subscribers &amp; followers</span>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">Foramtting function for JavaScript strings</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           <p>The project I work on has been around for about 10 years now. Due to the nature of the work a lot of the updates that should happen don&rsquo;t due to how work is paid for. I am currently working on the task of taking our application that was mainly built and used by customers for IE 6 and making that work in all of the latest major browsers. As you can imagine there is a lot of problems that we are running into.</p>
+
+<p>One issue that I was dealing with recently was a large section of code that takes an array of JSON objects and pushes the data into a table. The code was building each row, cell and all the attribute individually in a loop, as well we use a lot of non-standard attributes on elements. Not only was this just not working and was not rebuilding the full table.</p>
+
+<p>I began trying to work out a solution where I could define a string representing the table row I was creating with the locations where I needed the data to be placed (think printf or any number of methods in many programming languages.) After several iterations I had a working solution but didn&rsquo;t want to have to call the function as much as I just wanted to apply the formatting to the string, the result is the function below.</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">  <span style="color: #f8f8f2">String.</span><span style="color: #a6e22e">prototype</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">format</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">s</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">toString</span><span style="color: #f8f8f2">();</span>
+      <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">arguments</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>       
+        <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">reg</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">RegExp(</span><span style="color: #e6db74">&quot;\\{&quot;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;\\}&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;gm&quot;</span><span style="color: #f8f8f2">);</span>             
+        <span style="color: #a6e22e">s</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">reg</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">arguments</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]);</span>
+      <span style="color: #f8f8f2">}</span>
+
+      <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>As you can see from the code we are replacing points in the strings formatted like this {1} with elements from the array. an actual string example would be like the section below for say making a table. Then simply call the rowTemplate.format(arguments) to have all your values inserted in to the string, and using jQuery insert the table into the DOM.</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">  <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">rowTemplate</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;&lt;tr style=&quot;background:#ddd;cursor:pointer;&quot; attribute1=&quot;{0}&quot; attribute2=&quot;{1}&quot;&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&#39;</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #a6e22e">rowTemplate</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">format</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">attribute1</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">attribute2</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell1</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell2</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell3</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell4</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell5</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell6</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+<p>Complete example</p>
+
+<p>HTML table</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">&lt;table&gt;</span>
+    <span style="color: #f92672">&lt;tbody</span> <span style="color: #a6e22e">id=</span><span style="color: #e6db74">&quot;mytableBody&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;tr&gt;</span>
+            <span style="color: #f92672">&lt;td&gt;&lt;/td&gt;</span>
+        <span style="color: #f92672">&lt;/tr&gt;</span>
+    <span style="color: #f92672">&lt;/tbody&gt;</span>
+<span style="color: #f92672">&lt;/table&gt;</span>
+</pre></div>
+
+<p>JavaScript</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">  <span style="color: #f8f8f2">String.</span><span style="color: #a6e22e">prototype</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">format</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">s</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">toString</span><span style="color: #f8f8f2">();</span>
+      <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">arguments</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>       
+        <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">reg</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">RegExp(</span><span style="color: #e6db74">&quot;\\{&quot;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;\\}&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;gm&quot;</span><span style="color: #f8f8f2">);</span>             
+        <span style="color: #a6e22e">s</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">reg</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">arguments</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]);</span>
+      <span style="color: #f8f8f2">}</span>
+
+      <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+   <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">table</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;#mytableBody&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">rowTemplate</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;&lt;tr style=&quot;background:#ddd;cursor:pointer;&quot; attribute1=&quot;{0}&quot; attribute2=&quot;{1}&quot;&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&#39;</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #a6e22e">table</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">append</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">rowTemplate</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">format</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">attribute1</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">attribute2</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell1</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell2</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell3</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell4</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell5</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">cell6</span><span style="color: #f8f8f2">));</span>
+</pre></div>
+
+<p>A clean solution for a common problem that seems to have a million different methods to accomplish. Hope this solution works for you please comment if you have any suggestions on making it better.</p>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Fri Aug 8, 2014 </h4>
+          <h5 id="wc"> 500 Words </h5>
+        </section>
+        <ul id="categories">
+          
+            <li><a href="http://localhost:1313/topics/javascript">javascript</a> </li>
+          
+            <li><a href="http://localhost:1313/topics/jquery">jquery</a> </li>
+          
+            <li><a href="http://localhost:1313/topics/html">html</a> </li>
+          
+        </ul>
+        <ul id="tags">
+          
+            <li> <a href="http://localhost:1313/tags/javascript">javascript</a> </li>
+          
+            <li> <a href="http://localhost:1313/tags/html">html</a> </li>
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;
+        </section><section id="next">
+            &nbsp;<a class="next" href="http://localhost:1313/project/cuberific-rubiks-cube-timer">Cuberific A rubiks cube timer application <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    <div>
+        <section id="author">
+             <h4>About the Author:</h4> 
+                Brian Paulson is a Software Engineer for <a href="http://www.issinc.com">Intelligent Software Solutions</a>
+                You can find him on <a href="http://twitter.com">Twitter</a>,
+                <a href="http://github.com/spectre013">Github</a>, and <a title="Author: Brian Paulson on Google+" rel="author"
+                href="https://plus.google.com/+BrianPaulsonE/posts?rel=author"
+                target="_blank">Google+</a>.
+        </section>
+    </div>
+
+</aside>
+
+<meta itemprop="wordCount" content="420">
+<meta itemprop="datePublished" content="2014-08-08">
+<meta itemprop="url" content="http://localhost:1313/post/javascript-string-format">
+
+
+<aside id=comments>
+    <div><h2> Comments </h2></div>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'allaboutgo';
+    var disqus_identifier = 'http:\/\/localhost:1313\/post\/javascript-string-format';
+    var disqus_title = 'Foramtting function for JavaScript strings';
+    var disqus_url = 'http:\/\/localhost:1313\/post\/javascript-string-format';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</aside>
+
+<footer>
+  <div>
+    <p>
+    &copy; 2013-14 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Brian Paulson.</span></span>
+    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>; 
+    please attribute properly and link back. <br>
+    Powered by <a href="http://hugo.spf13.com">Hugo</a>..
+    </p>
+  </div>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-335735-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+
+
+
+
+</script>
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Projects on All About GO </title>
+      <title>Cubing on All About GO </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/topics/projects/index.xml</link>
+    <link>http://localhost:1313/tags/cubing/index.xml</link>
     <language>en-us</language>
     <author>Brian Paulson</author>
     <copyright>Copyright (c) 2014, Brian Paulson; all rights reserved.</copyright>
@@ -147,55 +147,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Basic Web Skeleton</title>
-      <link>http://localhost:1313/project/webskeleton</link>
-      <pubDate>Fri, 20 Jun 2014 00:00:00 UTC</pubDate>
-      <author>Brian Paulson</author>
-      <guid>http://localhost:1313/project/webskeleton</guid>
-      <description>
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Web Skeleton&lt;/h2&gt;
-
-&lt;p&gt;Web Skeleton is a simple http/net server set up with routing, template rendering with the only external library being Mux for routing.&lt;/p&gt;
-
-&lt;p&gt;Implementing Web Skeleton
-Using Web Skeleton is simple. First use go get to install the latest version of the library.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ go get github.com/spectre013/webskeleton
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once you have the source navigate to webskeleton directory and run.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ go run main.go
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will start the server at &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The handlers are all defined in handlers.go and rendering templates is done my calling the render function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Render(w, &amp;quot;index&amp;quot;, &amp;quot;Test&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the render function has the ability to render multiple templates. If you wanted to add a sidebar you would add&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;? template &amp;quot;sidebar&amp;quot; . ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to the index.html file. In sidebar.html file you would need to define the content.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;? define &amp;quot;sidebar&amp;quot; ?&amp;gt;
-    &amp;lt;!-- ... some html here ... --&amp;gt;
-&amp;lt;? end ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then would need to add the template to the render call.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Render(w, &amp;quot;index,sidebar&amp;quot;, &amp;quot;Test&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
